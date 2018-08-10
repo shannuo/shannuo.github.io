@@ -19,7 +19,41 @@ introduction: 'wepy框架与taro框架对比'
 
 ## 功能对比
 
-分享图片\refs\打点\新增页面需要重新run dev？
+wepy:
+
+```text
+类Vue开发风格
+
+支持自定义组件开发
+
+支持引入NPM包
+
+支持Promise
+
+支持ES2015+特性，如Async Functions
+
+支持多种编译器，Less/Sass/Stylus/PostCSS、Babel/Typescript、Pug
+
+支持多种插件处理，文件压缩，图片压缩，内容替换等
+
+支持 Sourcemap，ESLint等
+
+小程序细节优化，如请求列队，事件优化等
+```
+
+taro:
+
+支持使用 npm/yarn 安装管理第三方依赖。
+
+支持使用 ES7/ES8 甚至更加新的 ES 规范，一切都可自行配置。
+
+支持使用 CSS 预编译器，例如 Sass 等。
+
+支持使用 Redux 进行状态管理。
+
+小程序 API 优化，异步 API Promise 化。
+
+支持多端开发转化（这个很坑，基本可忽略）。
 
 ## 代码风格对比
 
@@ -232,3 +266,5 @@ taro:
 1.不支持 onClick={() => this.changeText('balabala')}这种写法，只能使用bind（箭头函数的语法是支持的，但是这样写就是没用，原因不详
 
 2.组件内同一个函数不能bind两次，[issue](https://github.com/NervJS/taro/issues/432)
+
+## END
