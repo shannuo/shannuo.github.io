@@ -43,6 +43,7 @@ wepy:
 
 taro:
 
+```text
 支持使用 npm/yarn 安装管理第三方依赖。
 
 支持使用 ES7/ES8 甚至更加新的 ES 规范，一切都可自行配置。
@@ -54,6 +55,7 @@ taro:
 小程序 API 优化，异步 API Promise 化。
 
 支持多端开发转化（这个很坑，基本可忽略）。
+```
 
 ## 代码风格对比
 
@@ -248,7 +250,9 @@ taro( map 方法):
 
 ### 非页面级组件生命周期
 
-taro: componentWillMount componentDidMount
+taro:
+
+componentWillMount componentDidMount
 
 wepy: onLoad
 
@@ -263,6 +267,7 @@ taro:
 与react中跨组件事件触发相同，也可以使用this.$parent乱拿数据,乱调父组件函数- -。
 
 问题：
+
 1.不支持 onClick={() => this.changeText('balabala')}这种写法，只能使用bind（箭头函数的语法是支持的，但是这样写就是没用，原因不详
 
 2.组件内同一个函数不能bind两次，[issue](https://github.com/NervJS/taro/issues/432)
