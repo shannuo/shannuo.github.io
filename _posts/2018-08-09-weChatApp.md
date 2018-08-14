@@ -63,7 +63,7 @@ taro:
 
 为了更好的对比，我用两个版本的语言写了一个音频播放卡片页。
 
-在实现这个音频播放卡片页的时候，发现wepy的一个问题： `页面销毁时，需要手动充值播放器状态，否则下次进入时还停留在上次的状态`,taro无这问题。
+在实现这个音频播放卡片页的时候，发现wepy的一个问题： `页面销毁时，需要手动重置播放器状态，否则下次进入时还停留在上次的状态`,taro无这问题。
 
 以下例子变量： playing
 
@@ -102,7 +102,7 @@ taro:
 
 {% highlight html %}
   {
-    playing ？<text wx:if="{{playing}}">0:00</text> : <image src="../assets/images/play.png" />
+    playing ？<text>0:00</text> : <image src="../assets/images/play.png" />
   }
 {% endhighlight %}
 
