@@ -54,3 +54,37 @@ var letterCombinations = function(digits) {
 
   console.log(tree);
 };
+
+70元 买3、5、7、11元的书有多少种组合
+const prices = [3, 5, 7, 11];
+
+function buyBook(n) {
+  const result = [];
+  getPlan([], result, n);
+  return result;
+}
+
+function getPlan(arr, result, n) {
+  let used = 0;
+  for (let i = 0; i < arr.length; i++) {
+    used += prices[i] * arr[i];
+  }
+  console.log(used, arr);
+  const max = n - used;
+
+  if (max === 0) {
+    return arr;
+  }
+
+  if (max < 0 || arr.length === n) {
+    return false;
+  }
+  // console.log(arr, used);
+
+  for (let i = 0; i < (max / prices[arr.length] + 1); i++) {
+    const next = getPlan([...arr, i], result, n);
+    if (next) {
+      result.push(next);
+    }
+  }
+}
